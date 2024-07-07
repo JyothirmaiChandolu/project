@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #007BFF;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        
+        .navbar {
+            width: 100%;
+            background-color: #001e4d;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000; /* Ensure navbar is above other elements */
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+        
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            display: flex;
+            padding: 20px;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+            margin-right: 40px;
+            width: 100px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: black;
+            background-color: chartreuse;
+        }
+        
+        .container {
+            text-align: center;
+            margin-top: 100px; /* Ensure it doesn't overlap with navbar */
+        }
+        
+        .animated-text {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 100px;
+            margin-bottom: 0;
+        }
+        
+        label {
+            background-color: #001e4d;
+            font-size: 2rem;
+            border-radius: 10px;
+            margin-right: 10px;
+            padding: 10px;
+            color: white;
+        }
+        
+        select {
+            padding: 10px;
+            font-size: 2rem;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        button {
+            width: 100px;
+            margin-top: 10px;
+            font-size: 20px;
+            background-color: chartreuse;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        #error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">QUIZZT</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>QUIZZT</h1>
+        <label for="topics">Select a topic:</label>
+        <select id="topics">
+            <option value="">--Select a Topic--</option> <!-- Added placeholder option -->
+            <option value="science">Science</option>
+            <option value="maths">Maths</option>
+            <option value="sports">Sports</option>
+            <option value="movies">Movies</option>
+            <option value="social">Social</option>
+            <option value="geography">Geography</option>
+            <option value="history">History</option>
+        </select>
+        <div class="start">
+            <button id="start-quiz">Start</button>
+        </div>
+        <div id="error-message">Please select a topic before proceeding!</div> <!-- Added error message -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const startButton = document.getElementById("start-quiz");
+            const topicSelect = document.getElementById("topics");
+            const errorMessage = document.getElementById("error-message");
+
+            startButton.addEventListener("click", () => {
+                const selectedTopic = topicSelect.value;
+
+                // Check if a topic is selected
+                if (!selectedTopic) {
+                    errorMessage.style.display = "block";
+                } else {
+                    errorMessage.style.display = "none";
+                    window.location.href = `quiz3.html?topic=${selectedTopic}`;
+                }
+            });
+
+            // Check for link issues
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.addEventListener("click", (event) => {
+                    console.log(`Navigating to: ${link.href}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
