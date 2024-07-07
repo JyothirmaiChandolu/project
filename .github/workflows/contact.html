@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZT</title>
+    <style>
+        /* Importing the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #007BFF; /* Blue background color */
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #001e4d;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 20px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    margin-right: 40px;
+    width:100px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.nav-links a:hover {
+    color:black;
+    background-color:chartreuse;
+}
+
+.container {
+
+    text-align: center;
+    margin-top: 50px; /* Adding margin to adjust for the fixed navbar */
+}
+
+.animated-text {
+    font-size: 100px;
+    margin-bottom: 20px;
+    animation: scroll;
+}
+
+h1 {
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+label {
+    background-color:#001e4d;
+    font-size: 2rem;
+    border-radius:10px;
+    margin-right: 10px;
+    padding: 10px;
+    color:white;
+}
+
+select {
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    width: 100px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: chartreuse;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.contact-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+    font-size: 18px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #001e4d;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #001e4d;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+        </style>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">QUIZZT</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Phone Number: 9111965864</p>
+            <p>Email: jyothichandolu@gmail.com</p>
+            <p>Address: Nuzvid, RGUKT iiit college </p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="text" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea><br>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
