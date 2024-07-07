@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZT</title>
+    <style>
+        /* Importing the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #007BFF; /* Blue background color */
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #001e4d;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 20px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    margin-right: 40px;
+    width:100px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.nav-links a:hover {
+    color:black;
+    background-color:chartreuse;
+}
+
+.container {
+    display:flex;
+    width: 80%;
+    margin-top: 50px; /* Adding margin to adjust for the fixed navbar */
+}
+
+.animated-text {
+    font-size: 100px;
+    margin-bottom: 20px;
+    animation: scroll;
+}
+
+h1{
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+label {
+    background-color:#001e4d;
+    font-size: 2rem;
+    border-radius:10px;
+    margin-right: 10px;
+    padding: 10px;
+    color:white;
+}
+
+select {
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+
+button{
+    width: 100px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: chartreuse;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.text{
+    color:black;
+    font-size: 25px;
+    flex:1;
+    margin-right: 20px;
+}
+
+.image{
+    margin-left: 20px;
+    flex: 1;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.image img{
+    max-width: 110%; 
+}
+        </style>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">QUIZZT</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="text">
+            <p>This is a small Quiz website, where you can answer different questions of different topics and get the score. Our website is mainly created using HTML, CSS, and JavaScript. The website structure is very basic; all you have to do is select a topic and click on the "Start" button. This directs you to the questions. When you click on the correct answer, the background color is changed to green. If you select a wrong option, then the background color is changed to red. Based on this, the score is also displayed.</p>
+        </div>
+        <div class="image"><img src="https://th.bing.com/th/id/OIP.aKEAqORP5TlYVBfU1MRJGAHaFj?rs=1&pid=ImgDetMain"></div>
+    </div>
+</body>
+</html>
